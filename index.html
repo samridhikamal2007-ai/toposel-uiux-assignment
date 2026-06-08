@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA Skincare - E-Commerce Homepage UI/UX Assignment</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Assignment Top Controller Dashboard -->
+  <div id="assignment-dashboard">
+    <div class="dashboard-header">
+      <div class="dashboard-logo">
+        <span class="badge">UI/UX Assignment</span>
+        <h2>AURA Beauty E-Commerce Homepage</h2>
+      </div>
+      <div class="dashboard-tabs">
+        <button class="tab-btn active" data-tab="hi-fi">High-Fidelity Mockup</button>
+        <button class="tab-btn" data-tab="lo-fi">Low-Fidelity Wireframes</button>
+        <button class="tab-btn" data-tab="submission">Submission Document</button>
+      </div>
+      <div class="dashboard-viewports" id="viewport-controls">
+        <button class="viewport-btn active" data-viewport="desktop">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          Desktop (1400px)
+        </button>
+        <button class="viewport-btn" data-viewport="mobile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01" stroke-linecap="round"/></svg>
+          Mobile (375px)
+        </button>
+        <button class="viewport-btn" data-viewport="responsive">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+          Responsive
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Canvas Wrapper -->
+  <div id="canvas-wrapper">
+    <div id="canvas-container" class="viewport-desktop">
+      
+      <!-- ========================================== -->
+      <!-- TAB 1: HIGH-FIDELITY PROTOTYPE -->
+      <!-- ========================================== -->
+      <div id="hi-fi-view" class="tab-content active-content">
+        
+        <!-- Top Announcement Bar -->
+        <div class="announcement-bar">
+          <p>Free complimentary shipping on orders over $75 • Code: RADIANT</p>
+        </div>
+
+        <!-- E-Commerce Header -->
+        <header class="ecommerce-header">
+          <div class="header-container">
+            <!-- Hamburger Menu for Mobile -->
+            <button class="mobile-menu-toggle" id="menu-toggle-btn" aria-label="Toggle Menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+            <!-- Brand Logo -->
+            <div class="logo">
+              <a href="#">A U R A</a>
+            </div>
+
+            <!-- Category Menu (Desktop) -->
+            <nav class="desktop-nav">
+              <ul>
+                <li><a href="#" class="active">Shop All</a></li>
+                <li><a href="#">Skincare</a></li>
+                <li><a href="#">Makeup</a></li>
+                <li><a href="#">Haircare</a></li>
+                <li><a href="#">Sustainable Rituals</a></li>
+              </ul>
+            </nav>
+
+            <!-- Search and Action Icons -->
+            <div class="header-actions">
+              <!-- Search Bar Container -->
+              <div class="search-container">
+                <input type="text" id="product-search" placeholder="Search skincare, rituals..." aria-label="Search products">
+                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+
+              <!-- Profile Icon -->
+              <a href="#" class="action-icon" aria-label="Profile">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </a>
+
+              <!-- Shopping Cart Icon -->
+              <button class="action-icon cart-trigger-btn" id="cart-btn" aria-label="Shopping Cart">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                <span class="cart-count" id="cart-counter">0</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Mobile Dropdown Navigation Menu -->
+          <nav class="mobile-nav" id="mobile-menu">
+            <ul>
+              <li><a href="#" class="active">Shop All</a></li>
+              <li><a href="#">Skincare</a></li>
+              <li><a href="#">Makeup</a></li>
+              <li><a href="#">Haircare</a></li>
+              <li><a href="#">Sustainable Rituals</a></li>
+              <li><a href="#">About Aura</a></li>
+              <li><a href="#">Store Locator</a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+          <div class="hero-bg-overlay"></div>
+          <div class="hero-content">
+            <span class="hero-tagline">Botanical Alchemy • Clean Science</span>
+            <h1 class="hero-title">Aura of Natural Radiance</h1>
+            <p class="hero-subtitle">Consciously formulated products using organic botanicals and clinical science to restore and illuminate your skin’s inherent glow.</p>
+            <div class="hero-actions-container">
+              <a href="#featured-products" class="btn btn-primary">Shop The Collection</a>
+              <a href="#" class="btn btn-secondary">Explore Our Rituals</a>
+            </div>
+          </div>
+          <div class="hero-scroll-indicator">
+            <span>Scroll to Explore</span>
+            <div class="scroll-dot"></div>
+          </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories-section">
+          <div class="section-container">
+            <div class="section-header">
+              <h2>Shop by Category</h2>
+              <p>Tailored essentials for your daily self-care rituals</p>
+            </div>
+            
+            <div class="categories-grid">
+              <a href="#" class="category-card">
+                <div class="category-img-wrapper" style="background-color: #f7ede2;">
+                  <div class="category-icon">🧴</div>
+                </div>
+                <h3>Skincare</h3>
+                <span>Sera, creams, cleansers</span>
+              </a>
+              <a href="#" class="category-card">
+                <div class="category-img-wrapper" style="background-color: #f5ebe0;">
+                  <div class="category-icon">💄</div>
+                </div>
+                <h3>Makeup</h3>
+                <span>Luminous bases, lip oils, tints</span>
+              </a>
+              <a href="#" class="category-card">
+                <div class="category-img-wrapper" style="background-color: #e3d5ca;">
+                  <div class="category-icon">🌿</div>
+                </div>
+                <h3>Haircare</h3>
+                <span>Nourishing oils & shampoos</span>
+              </a>
+              <a href="#" class="category-card">
+                <div class="category-img-wrapper" style="background-color: #d5bdaf;">
+                  <div class="category-icon">🌸</div>
+                </div>
+                <h3>Fragrance</h3>
+                <span>Botanical scents & mist oils</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Product Listing Section -->
+        <section id="featured-products" class="products-section">
+          <div class="section-container">
+            <div class="section-header">
+              <span class="badge-label">Best Sellers</span>
+              <h2>Most Coveted Rituals</h2>
+              <p>Highly effective formulas loved by our community</p>
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div class="products-grid" id="products-grid-list">
+              
+              <!-- Card 1 -->
+              <div class="product-card" data-name="aura radiance serum" data-category="skincare">
+                <div class="product-image-container">
+                  <img src="assets/skincare_dropper.png" alt="Aura Radiance Serum" class="product-image">
+                  <span class="product-tag">Award Winner</span>
+                  <div class="quick-add-overlay">
+                    <button class="btn btn-quick-add" data-id="1" data-title="Aura Radiance Serum" data-price="48.00" data-img="assets/skincare_dropper.png">Add to Cart</button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <div class="product-rating">
+                    <span>★★★★★</span> <span class="rating-val">(4.9)</span>
+                  </div>
+                  <h3 class="product-title"><a href="#">Aura Radiance Serum</a></h3>
+                  <p class="product-category">Skincare • Hydrating & Brightening</p>
+                  <div class="product-price-row">
+                    <span class="price">$48.00</span>
+                    <button class="btn-card-add cart-add-btn" data-id="1" data-title="Aura Radiance Serum" data-price="48.00" data-img="assets/skincare_dropper.png" aria-label="Add Aura Radiance Serum to Cart">+</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="product-card" data-name="velvet hydration cream" data-category="skincare">
+                <div class="product-image-container">
+                  <img src="assets/face_cream.png" alt="Velvet Hydration Cream" class="product-image">
+                  <span class="product-tag">New In</span>
+                  <div class="quick-add-overlay">
+                    <button class="btn btn-quick-add" data-id="2" data-title="Velvet Hydration Cream" data-price="36.00" data-img="assets/face_cream.png">Add to Cart</button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <div class="product-rating">
+                    <span>★★★★☆</span> <span class="rating-val">(4.7)</span>
+                  </div>
+                  <h3 class="product-title"><a href="#">Velvet Hydration Cream</a></h3>
+                  <p class="product-category">Skincare • Intense Barrier Recovery</p>
+                  <div class="product-price-row">
+                    <span class="price">$36.00</span>
+                    <button class="btn-card-add cart-add-btn" data-id="2" data-title="Velvet Hydration Cream" data-price="36.00" data-img="assets/face_cream.png" aria-label="Add Velvet Hydration Cream to Cart">+</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="product-card" data-name="botanical nourish shampoo" data-category="haircare">
+                <div class="product-image-container">
+                  <img src="assets/shampoo_bottle.png" alt="Botanical Nourish Shampoo" class="product-image">
+                  <span class="product-tag">Best Seller</span>
+                  <div class="quick-add-overlay">
+                    <button class="btn btn-quick-add" data-id="3" data-title="Botanical Nourish Shampoo" data-price="28.00" data-img="assets/shampoo_bottle.png">Add to Cart</button>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <div class="product-rating">
+                    <span>★★★★★</span> <span class="rating-val">(4.8)</span>
+                  </div>
+                  <h3 class="product-title"><a href="#">Botanical Nourish Shampoo</a></h3>
+                  <p class="product-category">Haircare • Strengthening Treatment</p>
+                  <div class="product-price-row">
+                    <span class="price">$28.00</span>
+                    <button class="btn-card-add cart-add-btn" data-id="3" data-title="Botanical Nourish Shampoo" data-price="28.00" data-img="assets/shampoo_bottle.png" aria-label="Add Botanical Nourish Shampoo to Cart">+</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Empty Search State -->
+            <div id="empty-search-state" class="hidden">
+              <p>We couldn't find any products matching your search term.</p>
+              <button class="btn btn-secondary" id="clear-search-btn">Reset Search</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Offers / Promotions Section -->
+        <section class="promo-section">
+          <div class="promo-container">
+            <div class="promo-content">
+              <span class="promo-sub">Limited Time Offer</span>
+              <h2>The Solstice Glow Ritual</h2>
+              <p>Embrace the warmth of summer with our curated collection of botanical formulations. Purchase the Radiance Serum and Velvet Hydration Cream today and receive a complimentary Travel Sandalwood Body Oil ($22 value) automatically at checkout.</p>
+              <div class="promo-timer">
+                <div class="time-block">
+                  <span id="promo-hours">23</span>
+                  <label>Hours</label>
+                </div>
+                <div class="time-block">
+                  <span id="promo-mins">45</span>
+                  <label>Mins</label>
+                </div>
+                <div class="time-block">
+                  <span id="promo-secs">12</span>
+                  <label>Secs</label>
+                </div>
+              </div>
+              <a href="#featured-products" class="btn btn-dark">Redeem Ritual</a>
+            </div>
+            <div class="promo-image-showcase">
+              <div class="promo-blob-bg"></div>
+              <!-- Floating graphic displaying products -->
+              <div class="floating-products">
+                <img src="assets/skincare_dropper.png" alt="Serum Product" class="floating-img img-1">
+                <img src="assets/face_cream.png" alt="Cream Product" class="floating-img img-2">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Brand Values (UX micro-benefit indicators) -->
+        <section class="brand-values">
+          <div class="values-container">
+            <div class="value-block">
+              <div class="value-icon">🌿</div>
+              <h4>100% Vegan Formulas</h4>
+              <p>Sustainably harvested plant ingredients, free from fillers.</p>
+            </div>
+            <div class="value-block">
+              <div class="value-icon">🐰</div>
+              <h4>Cruelty-Free Certified</h4>
+              <p>Leaping Bunny approved. Never tested on animals.</p>
+            </div>
+            <div class="value-block">
+              <div class="value-icon">♻️</div>
+              <h4>Circular Packaging</h4>
+              <p>Recycled glass containers and post-consumer board boxes.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="ecommerce-footer">
+          <div class="footer-container">
+            <div class="footer-brand-col">
+              <span class="footer-logo">A U R A</span>
+              <p>Creating sustainable, luxurious self-care rituals designed to connect body, mind, and botanical earth.</p>
+              <div class="social-links">
+                <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                <a href="#" aria-label="Pinterest"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 22c.28-.83.74-2.45.96-3.29.13-.5.73-2.84.73-2.84s-.18-.36-.18-.9c0-1.4.81-2.46 1.83-2.46.86 0 1.28.65 1.28 1.43 0 .87-.55 2.17-.84 3.38-.24.99.49 1.8 1.47 1.8 1.76 0 3.12-1.86 3.12-4.54 0-2.37-1.7-4.03-4.14-4.03-2.82 0-4.48 2.12-4.48 4.3 0 .85.33 1.77.74 2.27.08.1.09.18.07.28l-.28 1.14c-.04.18-.15.22-.34.13-1.27-.59-2.07-2.45-2.07-3.95 0-3.21 2.33-6.16 6.72-6.16 3.53 0 6.27 2.51 6.27 5.87 0 3.51-2.21 6.33-5.28 6.33-1.03 0-2.01-.54-2.34-1.17l-.64 2.44c-.23.88-.86 1.99-1.29 2.69.83.25 1.72.39 2.65.39 5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12c0 2.22.72 4.28 1.95 5.95l-.17-.62z"/></svg></a>
+                <a href="#" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+              </div>
+            </div>
+
+            <div class="footer-nav-col">
+              <h4>Shop</h4>
+              <ul>
+                <li><a href="#">Skincare Collection</a></li>
+                <li><a href="#">Makeup Tints</a></li>
+                <li><a href="#">Haircare Systems</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Special Offers</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-nav-col">
+              <h4>About</h4>
+              <ul>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Clean Formulation Standard</a></li>
+                <li><a href="#">Sustainability Report</a></li>
+                <li><a href="#">Aura Press</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-nav-col">
+              <h4>Help & Care</h4>
+              <ul>
+                <li><a href="#">Track Orders</a></li>
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Returns & Exchanges</a></li>
+                <li><a href="#">Frequently Asked Questions</a></li>
+                <li><a href="#">Contact Support</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-newsletter-col">
+              <h4>Aura Journal</h4>
+              <p>Receive skincare wisdom, collection reveals, and exclusive offers once a week.</p>
+              <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Aura Journal!');">
+                <input type="email" placeholder="Your email address" required aria-label="Email Address">
+                <button type="submit" aria-label="Subscribe">→</button>
+              </form>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2026 AURA Beauty Inc. All rights reserved. • Privacy Policy • Terms of Service</p>
+          </div>
+        </footer>
+
+      </div>
+
+      <!-- ========================================== -->
+      <!-- TAB 2: LOW-FIDELITY WIREFRAMES -->
+      <!-- ========================================== -->
+      <div id="lo-fi-view" class="tab-content">
+        <div class="wireframe-workspace">
+          
+          <!-- Informational Header -->
+          <div class="wireframe-info-bar">
+            <h3>Low-Fidelity Skeleton & UX Blueprints</h3>
+            <p>Interactive wireframe representation showing spacing grids, structural divisions, CTA hierarchy, and responsive adaptation logic. Hover/click the glowing numbers to see design justifications.</p>
+          </div>
+
+          <!-- Wireframe Shell simulating the Homepage -->
+          <div class="wireframe-container">
+            
+            <!-- Wireframe Navigation -->
+            <div class="wf-block wf-header">
+              <span class="wf-label">Header Container (Grid/Flex Layout)</span>
+              <div class="wf-flex-between">
+                <div class="wf-element wf-logo-box">LOGO</div>
+                <div class="wf-element wf-nav-box">NAVIGATION ITEMS (Horizontal list on Desktop, collapsable menu on Mobile)</div>
+                <div class="wf-element wf-search-box">SEARCH INPUT</div>
+                <div class="wf-element wf-icons-box">ICONS</div>
+              </div>
+              <!-- Wireframe Annotation Marker -->
+              <div class="annotation-marker" data-note="header-flow">1</div>
+            </div>
+
+            <!-- Wireframe Hero -->
+            <div class="wf-block wf-hero">
+              <span class="wf-label">Hero Area (Flex Centered, 100vh on Desktop / 75vh on Mobile)</span>
+              <div class="wf-hero-inner">
+                <div class="wf-skeleton wf-tag">TAGLINE SKELETON</div>
+                <div class="wf-skeleton wf-h1">MAIN HEADING PLACEHOLDER (H1)</div>
+                <div class="wf-skeleton wf-desc">Supporting description text explaining the unique selling proposition (USP).</div>
+                <div class="wf-flex-row">
+                  <div class="wf-element wf-btn-wf primary">PRIMARY CTA (Shop)</div>
+                  <div class="wf-element wf-btn-wf">SECONDARY CTA (Learn)</div>
+                </div>
+              </div>
+              <div class="annotation-marker" data-note="hero-ux">2</div>
+            </div>
+
+            <!-- Wireframe Categories -->
+            <div class="wf-block wf-categories">
+              <span class="wf-label">Categories Section (Grid layout: 4 Columns on Desktop, 2x2 or Scrollable on Mobile)</span>
+              <div class="wf-grid-4">
+                <div class="wf-cat-item">
+                  <div class="wf-circle"></div>
+                  <div class="wf-skeleton wf-text-sm">Category 1</div>
+                </div>
+                <div class="wf-cat-item">
+                  <div class="wf-circle"></div>
+                  <div class="wf-skeleton wf-text-sm">Category 2</div>
+                </div>
+                <div class="wf-cat-item">
+                  <div class="wf-circle"></div>
+                  <div class="wf-skeleton wf-text-sm">Category 3</div>
+                </div>
+                <div class="wf-cat-item">
+                  <div class="wf-circle"></div>
+                  <div class="wf-skeleton wf-text-sm">Category 4</div>
+                </div>
+              </div>
+              <div class="annotation-marker" data-note="categories-layout">3</div>
+            </div>
+
+            <!-- Wireframe Products -->
+            <div class="wf-block wf-products">
+              <span class="wf-label">Product Listing Grid (3 Columns on Desktop, 1 Column/List on Mobile)</span>
+              <div class="wf-grid-3">
+                <!-- Card 1 -->
+                <div class="wf-product-card">
+                  <div class="wf-image-box">PRODUCT IMAGE PLACEHOLDER (60% Height)</div>
+                  <div class="wf-skeleton wf-rating">★★★★★ (Rating)</div>
+                  <div class="wf-skeleton wf-title-box">Product Title Text</div>
+                  <div class="wf-skeleton wf-category-box">Product Category Subtext</div>
+                  <div class="wf-flex-between">
+                    <span class="wf-skeleton wf-price-box">$ PRICE</span>
+                    <div class="wf-element wf-btn-small">+ Add</div>
+                  </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="wf-product-card">
+                  <div class="wf-image-box">PRODUCT IMAGE PLACEHOLDER</div>
+                  <div class="wf-skeleton wf-rating">★★★★★</div>
+                  <div class="wf-skeleton wf-title-box">Product Title Text</div>
+                  <div class="wf-skeleton wf-category-box">Product Category Subtext</div>
+                  <div class="wf-flex-between">
+                    <span class="wf-skeleton wf-price-box">$ PRICE</span>
+                    <div class="wf-element wf-btn-small">+ Add</div>
+                  </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="wf-product-card">
+                  <div class="wf-image-box">PRODUCT IMAGE PLACEHOLDER</div>
+                  <div class="wf-skeleton wf-rating">★★★★★</div>
+                  <div class="wf-skeleton wf-title-box">Product Title Text</div>
+                  <div class="wf-skeleton wf-category-box">Product Category Subtext</div>
+                  <div class="wf-flex-between">
+                    <span class="wf-skeleton wf-price-box">$ PRICE</span>
+                    <div class="wf-element wf-btn-small">+ Add</div>
+                  </div>
+                </div>
+              </div>
+              <div class="annotation-marker" data-note="card-hierarchy">4</div>
+            </div>
+
+            <!-- Wireframe Promo Banner -->
+            <div class="wf-block wf-promo">
+              <span class="wf-label">Promotional Section (Flex layout: Split Columns on Desktop, Stacked on Mobile)</span>
+              <div class="wf-promo-content">
+                <div class="wf-skeleton wf-tag">LIMITED EVENT TAG</div>
+                <div class="wf-skeleton wf-h2">OFFER TITLE (H2)</div>
+                <div class="wf-skeleton wf-desc">Promotional terms, time limits, and benefits to trigger urgent action.</div>
+                <div class="wf-element wf-btn-wf dark">REDEEM OFFER BUTTON</div>
+              </div>
+              <div class="annotation-marker" data-note="promo-friction">5</div>
+            </div>
+
+            <!-- Wireframe Footer -->
+            <div class="wf-block wf-footer">
+              <span class="wf-label">Footer Section (Grid layout: Multi-Column on Desktop, Stacked accordion on Mobile)</span>
+              <div class="wf-grid-5">
+                <div class="wf-footer-col">
+                  <div class="wf-skeleton wf-title-box">BRAND LOGO</div>
+                  <div class="wf-skeleton wf-desc">Mission statement snippet & social media nodes.</div>
+                </div>
+                <div class="wf-footer-col">
+                  <div class="wf-skeleton wf-link-title">Link Col 1</div>
+                  <div class="wf-skeleton wf-link-item">Link 1</div>
+                  <div class="wf-skeleton wf-link-item">Link 2</div>
+                </div>
+                <div class="wf-footer-col">
+                  <div class="wf-skeleton wf-link-title">Link Col 2</div>
+                  <div class="wf-skeleton wf-link-item">Link 1</div>
+                  <div class="wf-skeleton wf-link-item">Link 2</div>
+                </div>
+                <div class="wf-footer-col">
+                  <div class="wf-skeleton wf-link-title">Link Col 3</div>
+                  <div class="wf-skeleton wf-link-item">Link 1</div>
+                  <div class="wf-skeleton wf-link-item">Link 2</div>
+                </div>
+                <div class="wf-footer-col">
+                  <div class="wf-skeleton wf-link-title">NEWSLETTER</div>
+                  <div class="wf-element wf-input-box">Email Input</div>
+                  <div class="wf-element wf-btn-wf dark">Submit</div>
+                </div>
+              </div>
+              <div class="annotation-marker" data-note="footer-ux">6</div>
+            </div>
+
+          </div>
+
+          <!-- Annotation Detail Panel -->
+          <div class="annotation-detail-panel" id="detail-panel">
+            <h4 id="annotation-title">Hover or click any layout number marker (1-6) on the wireframe above.</h4>
+            <p id="annotation-desc">Explore the detailed layout logic, responsive breakpoint transitions, and design principles implemented in each block of the E-commerce homepage.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========================================== -->
+      <!-- TAB 3: DESIGN SUBMISSION DOCUMENT -->
+      <!-- ========================================== -->
+      <div id="submission-view" class="tab-content">
+        <div class="doc-panel">
+          <div class="doc-header">
+            <h3>Submission Guide & Design Portfolio Write-up</h3>
+            <p>This document contains the detailed written analysis and structure explanations required for the assignment submission. You can copy the contents directly using the copy button.</p>
+            <button class="btn btn-primary" id="copy-doc-btn">Copy Submission Text</button>
+          </div>
+
+          <div class="doc-content" id="copyable-document">
+            <h2>E-Commerce Homepage Design Report: AURA Skincare</h2>
+            <hr>
+            
+            <h3>1. Design Approach & Philosophy</h3>
+            <p><strong>Brand Vision:</strong> AURA is a premium, clean-beauty e-commerce brand that bridges the gap between organic botanical ingredients and clinical skin science. The core visual system was designed to feel authentic, soothing, and premium, avoiding cluttered and aggressively transactional layouts in favor of an elegant, editorial digital storefront.</p>
+            <p><strong>Visual Hierarchy:</strong> High-priority elements are structured carefully to draw the eye first to the value statement (Hero), followed by rapid catalog accessibility (Categories), and key conversion points (Featured Products and Time-Sensitive Promotions).</p>
+
+            <h3>2. Visual Design System</h3>
+            <ul>
+              <li><strong>Typography:</strong>
+                <ul>
+                  <li><em>Headings:</em> <strong>Playfair Display</strong> (Serif) – Exudes heritage, elegance, and premium quality, creating a luxury editorial editorial tone.</li>
+                  <li><em>Body & UI Elements:</em> <strong>Inter</strong> (Sans-Serif) – High readability, modern, geometric, ensuring user interfaces remain legible and clean at small font sizes (e.g. navigation links, prices, CTA buttons).</li>
+                </ul>
+              </li>
+              <li><strong>Color Theory & Palette:</strong>
+                <ul>
+                  <li><em>Warm Sand (Background - #FDFBF7):</em> Off-white, soft background that reduces eye strain and provides a warmer, more human backdrop than harsh pure white.</li>
+                  <li><em>Sage Green (Primary Accent - #5F7D6D):</em> Connects the product to its botanical roots, signaling organic nature, wellness, and calm. Used for badges, subtle accents, and categories.</li>
+                  <li><em>Charcoal (Primary Text - #2C2C2C):</em> Provides high accessibility contrast against sand, without the stark coldness of absolute black (#000000).</li>
+                  <li><em>Rose Copper (Secondary/Hover - #C88A75):</em> A luxurious warm tone representing skin-glow and metallic premium finishes. Used to indicate interactive hover states.</li>
+                </ul>
+              </li>
+              <li><strong>Spacing and Grids:</strong>
+                <ul>
+                  <li>Built on an 8px spacing grid system to ensure visual consistency across padding and margin.</li>
+                  <li>Desktop utilizes a 12-column flexible grid system to keep layouts neatly aligned.</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>3. Layout & Wireframe Hierarchy (Desktop vs. Mobile)</h3>
+            <p>To demonstrate a truly responsive layout, the UI reflows seamlessly between viewport dimensions:</p>
+            <table class="design-table">
+              <thead>
+                <tr>
+                  <th>Section</th>
+                  <th>Desktop Viewport (1440px)</th>
+                  <th>Mobile Viewport (375px)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Header / Nav</strong></td>
+                  <td>Logo left, primary links centered, search and user action icons right. Focuses on horizontal density.</td>
+                  <td>Logo centered, links collapsed inside a slide-in hamburger menu, search and cart icons accessible on the outer edge.</td>
+                </tr>
+                <tr>
+                  <td><strong>Hero Section</strong></td>
+                  <td>Side-by-side flex layout with a luxurious background image filling the screen. Visual focus on left-aligned heading and clear CTAs.</td>
+                  <td>Stacked vertical alignment. Text and primary CTA stacked on top of each other, centering the visual weight.</td>
+                </tr>
+                <tr>
+                  <td><strong>Categories</strong></td>
+                  <td>4-column horizontal grid showing round visual categories (Skincare, Makeup, Haircare, Fragrance) with clean titles.</td>
+                  <td>2x2 grid or horizontal scrollable swiper container to save vertical screen space and keep users from scrolling too long.</td>
+                </tr>
+                <tr>
+                  <td><strong>Product Listing</strong></td>
+                  <td>3-column product card grid. Rich hover interactions reveal an overlay "Quick Add to Cart" button.</td>
+                  <td>Stacked 1-column grid or double card columns, optimized for finger-tapping. Quick-add button visible below product details without requiring hover.</td>
+                </tr>
+                <tr>
+                  <td><strong>Offers / Promo</strong></td>
+                  <td>Visual split columns: left-aligned promo statement + ticking countdown timer, right-side floating botanical image cluster.</td>
+                  <td>Stacked single-column layout. Countdown timer fits below the offer headline; floating graphics scale down or collapse to prioritize copy.</td>
+                </tr>
+                <tr>
+                  <td><strong>Footer</strong></td>
+                  <td>4-column grid (Brand info, Shop categories, Corporate info, Help desk) + large Newsletter Signup field.</td>
+                  <td>Stacked vertical columns with expandable accordion tabs to prevent footer bloat and let users reach legal credits quickly.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>4. Key User Flow & UX Improvements</h3>
+            <ol>
+              <li><strong>Immediate Utility (Header Search & Cart Drawer):</strong> A persistent header keeps search and the cart active. Adding products instantly runs an animation on the cart icon, incrementing the counter and updating a side cart panel, letting users review their purchases without leaving the current page.</li>
+              <li><strong>Frictionless Cart Conversion:</strong> Each product card contains a quick-add "+" action button which bypasses loading a detailed product detail page (PDP) if a user is looking to buy quickly, streamlining the conversion funnel.</li>
+              <li><strong>Urgency Mechanics (Promo Section):</strong> An active countdown timer in the promotion banner visually represents time running out, driving FOMO and increasing click-through rates.</li>
+              <li><strong>Clean Filtering:</strong> An interactive search input filters products instantly on the client side, showing how simple search functions.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Shopping Cart Drawer (Interactive Feature) -->
+  <div class="cart-drawer-overlay" id="cart-overlay">
+    <div class="cart-drawer">
+      <div class="cart-drawer-header">
+        <h3>Your Rituals (<span id="cart-drawer-count">0</span>)</h3>
+        <button class="close-cart-btn" id="close-cart-btn" aria-label="Close Cart">✕</button>
+      </div>
+      <div class="cart-drawer-items" id="cart-items-container">
+        <!-- Dynamic Cart Items go here -->
+        <div class="empty-cart-message">Your shopping cart is empty. Start adding items to build your skin ritual!</div>
+      </div>
+      <div class="cart-drawer-footer">
+        <div class="cart-totals">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <p class="shipping-notice">Taxes and shipping calculated at checkout.</p>
+        <button class="btn btn-primary checkout-btn" onclick="alert('Proceeding to simulated checkout...');">Checkout Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Application -->
+  <script src="app.js"></script>
+</body>
+</html>
